@@ -25,7 +25,7 @@ function ItunesController(){
                 <div class="media-body" style="margin-right:15vw; padding-top:2vh">
                 <h2>${song.artist}</h2>
                 <h5>Album: ${song.collection}</h3>
-                <a href="https://www.apple.com/itunes/music/" class="btn btn-outline-success my-2" role="button" aria-pressed ="true" style="margin-right:2vw">$${song.price}</a> 
+                <a href="https://www.apple.com/itunes/music/" class="btn btn-outline-success my-2" role="button" aria-pressed ="true" style="margin-right:1vw">$${song.price}</a> 
                 <audio controls controlsList="nodownload" src="${song.preview}"></audio>
           
                 </div> 

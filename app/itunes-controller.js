@@ -16,7 +16,7 @@ function ItunesController(){
             var song = results[i];
             
             template += `
-            <div class="row media">
+            <div class="row media my-2">
                 <div class="col media-left text-center" style="margin-left:15vw; padding:0">   
                 
                 <img src="${song.albumArt}">

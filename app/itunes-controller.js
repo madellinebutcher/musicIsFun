@@ -10,7 +10,7 @@ function ItunesController(){
     //Start coding here
     
     function drawSongs(results){
-    
+        scrollTo(0,0)
         var template = ''
         for (let i = 0; i < results.length; i++) {
             var song = results[i];

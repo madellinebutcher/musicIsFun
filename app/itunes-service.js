@@ -10,7 +10,7 @@ function ItunesService(){
     this.getMusicByArtist = function(artist) {
 
       //allows requests to localhost: 8080 otherwise blocked by itunes
-      var url = 'https://itunes.apple.com/search?term=' + artist;
+      var url = 'https://itunes.apple.com/search?media=music&term=' + artist;
       
       //changes the button to loading while songs load
       $('#get-music-button').text('LOADING....');
@@ -20,7 +20,7 @@ function ItunesService(){
         var songList = response.results.map(function (song) {
                   return {
                       title: song.trackName,
-                      albumArt: swapUrlSize(song.artworkUrl60, 200),
+                      albumArt: swapUrlSize(song.artworkUrl60, 275),
                       artist: song.artistName,
                       collection: song.collectionName,
                       price: song.collectionPrice,

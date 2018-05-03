@@ -8,6 +8,7 @@ function ItunesController(){
     }
   
     //Start coding here
+    
     function drawSongs(results){
     
         var template = ''
@@ -15,15 +16,20 @@ function ItunesController(){
             var song = results[i];
             
             template += `
-           
-                <h2>Title: ${song.title}</h2>
+            <div class="row media">
+                <div class="col media-left text-center" style="margin-left:15vw; padding:0">   
+                
                 <img src="${song.albumArt}">
-                <h2>Artist: ${song.artist}</h2>
-                <h3>Album: ${song.collection}</h3>
-                <h5>Price: $${song.price}</h3>
+
+                </div>
+                <div class="media-body" style="margin-right:15vw; padding-top:2vh">
+                <h2>${song.artist}</h2>
+                <h5>Album: ${song.collection}</h3>
+                <a href="https://www.apple.com/itunes/music/" class="btn btn-outline-success" role="button" aria-pressed ="true" style="margin-left:1vw">$${song.price}</a> 
                 <audio controls controlsList="nodownload" src="${song.preview}"></audio>
           
-            
+                </div> 
+            </div>    
             `
         }
         document.getElementById('songs').innerHTML = template
